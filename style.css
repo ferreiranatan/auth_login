@@ -1,26 +1,29 @@
-:root{
-    --input-linear:linear-gradient(120deg, #ffd600,#e75590, #00c2cb) ;
-    --button-linear: linear-gradient(120deg, #e75590, #00c2cb,  #e75590);
+/*Tela de Login*/
+
+:root {
+    --input-linear: linear-gradient(120deg, #ffd600, #e75590, #00c2cb);
+    --button-linear: linear-gradient(120deg, #e75590, #00c2cb, #e75590);
 }
 
 
 
-body{
-margin: 0;
-padding: 0;
-font-family: sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
 
-.login{
+.login {
     height: 100vh;
     background: var(--input-linear);
     display: flex;
     justify-content: center;
     align-items: center;
+        
 }
 
-.login__container{
+.login__container {
     min-height: 400px;
     width: 300px;
     background-color: #ffffffff;
@@ -32,12 +35,12 @@ font-family: sans-serif;
     align-items: center;
 }
 
-.login__title{
+.login__title {
     margin-bottom: 32px;
     color: #303030;
 }
 
-.login__form{
+.login__form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,7 +48,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.login__input{
+.login__input {
     height: 48px;
     width: 100%;
     box-sizing: border-box;
@@ -54,57 +57,90 @@ font-family: sans-serif;
     outline: none;
 }
 
-.login__input-border{
+.login__input-border {
     height: 1px;
     width: 100%;
-    margin-bottom:16px ;
+    margin-bottom: 16px;
     background-color: #cfcfcfcf;
     transition: 3s, ease-in-out;
 }
 
-login__input-border::after{
-  content:'';
-  display: block;
-  height: 1px;
-  width: 0;
-  margin-bottom: 16px;
-  background: var(--input-linear);
-  transition: .3s ease-in-out;
+login__input-border::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: var(--input-linear);
+    transition: .3s ease-in-out;
 }
 
-.login__input:focus + .login__input-border::after{
-    width:100% ;
+.login__input:focus+.login__input-border::after {
+    width: 100%;
 }
 
-.login__submit{
-height: 40px;
-width: 100%;
-outline: none;
-background: var(--button-linear);
-background-size: 200%;
-margin-bottom: 32px;
-color: #ffffffff;
-font-size: 16px;
-font-weight: bold;
-border: unset;
-border-radius: 4px;
-cursor: pointer;
-transition: .5 ease-in-out;
+.login__submit {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    background: var(--button-linear);
+    background-size: 200%;
+    margin-bottom: 32px;
+    color: #ffffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5 ease-in-out;
 }
 
-.login__submit:hover{
+.login__submit:hover {
     background-position: right;
 }
 
-.login__reset{
+.login__reset {
     font-size: 12px;
-    color:#929292;
+    color: #929292;
     text-decoration: none;
 
 }
 
 
-.login__reset{
+.login__reset {
     font-size: 15px;
     color: #919292
+}
+
+/*Tela Crachá*/
+
+
+.form__geral {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form__container {
+    max-width: 500px;
+   
+    margin: 20px auto;
+    border: 2px solid #aaa3;
+    padding: 20px;
+    text-align: center;
+    background-color: #303030;
+}
+
+.form__title {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.form__img {
+    width: 80px;
+    margin-bottom: 2px;
+}
+.form__informations{
+    justify-content: flex-end;
+    border: solid white;
+    text-align: end;
 }

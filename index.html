@@ -9,24 +9,33 @@
 </head>
 
 <body>
- <main class="login">
-    <div class="login__container">
-        <h1 class="login__title">Login </h1>
-            <form action="" class="login__form">
-                <input type="text" id="loginInput" class="login__input" placeholder="user">
-                <span class="login__input-border"></span>
-                <input type="password" id="passwordInput" class="login__input" placeholder="senha">
-                <span class="login__input-border"></span>
-                <button class="login__submit">Login</button>
-                <a href="#" class="login__reset">Esqueci a senha</a>
-            </form>
+    <form id="formLogin" class="login__form"   style="display: block;">
+        <div class="login__container">
+            <h1 class="login__title">Login </h1>
+            <input type="text" id="loginInput" class="login__input" placeholder="user">
+            <span class="login__input-border"></span>
+            <input type="password" id="passwordInput" class="login__input" placeholder="senha" autocomplete="current-password">
+            <span class="login__input-border"></span>
+            <button class="login__submit" id="botao">Login</button>
+            <a href="#" class="login__reset">Esqueci a senha</a>
         </div>
-    </main>
-       
+    </form>
 
 
 
-    <script src="main.js"></script>
+    <form action="#" class="form__geral" id="cracha" style="display: none;">
+        <div>
+            <h2>IDENTIFICATION CARD</h2>
+        </div>
+        <div id="crachaDados">
+            
+              
+            </div>
+    </form>
+
+
+
+    <script src="main2.js"></script>
 </body>
 
 </html>
