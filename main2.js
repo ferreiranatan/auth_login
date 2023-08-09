@@ -40,11 +40,9 @@ async function getApi() {
     exibirNaDiv(dadosApi)
 }
 
-function exibirNaDiv(listaDados, targetDiv) {
-    exibirTelaDados();
-    targetDiv.innerHTML = ''; // Limpa o conteúdo anterior
+function exibirNaDiv(listaDados, targetDiv) 
 
-    listaDados.forEach(dado => {
+    listaDados.map(dado => {
         targetDiv.innerHTML += `
             <p><strong>ID:</strong> <span id="idNumber">${dado.id}</span></p>
             <br>
