@@ -62,4 +62,3 @@ If you are still having trouble, please contact the Cracha support team.
 * https://stackoverflow.com/
 * https://www.alura.com.br/
 
-https://www.alura.com.br/
