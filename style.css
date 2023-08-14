@@ -143,6 +143,7 @@ body {
 .badge__container {
     display: flex;
     align-items: center;
+    margin-top: 0.5%;
     background-color: #ffcc00;
     box-sizing: border-box;
     padding: 25px;
