@@ -14,10 +14,10 @@ Aqui estão alguns exemplos de usuários que você pode usar para autenticar com
 
 * Usuário: hbingley1
 * Senha: CQutx25i8r
-
+------------------------------------------
 * Usuário: jtreleven5
 * Senha: zY1nE46Zm
-
+------------------------------------------
 * Usuário: dpettegre6
 * Senha: YVmhktgYVS
 
