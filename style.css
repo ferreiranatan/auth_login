@@ -1,9 +1,14 @@
 /*Tela de Login*/
 
+
+
+
 :root {
-    --input-linear: linear-gradient(120deg, #ffd600, #e75590, #00c2cb);
-    --button-linear: linear-gradient(120deg, #e75590, #00c2cb, #e75590);
+    --input-linear: linear-gradient(120deg, #8cb999, #00c2cb);
+    --button-linear: linear-gradient(120deg, #ffcc00, #262626);
+    --back-badge: (#003153);
 }
+
 
 
 
@@ -11,21 +16,29 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: #1663be
 }
 
-
-.login {
-    height: 100vh;
-    background: var(--input-linear);
+.login__geral {
     display: flex;
-    justify-content: center;
     align-items: center;
-        
+    justify-content: center;
+    width: 100%;
+    background: var(--input-linear);
+    align-items: start;
+    justify-content: center;
+    position: relative;
 }
+
+.login__form {
+    height: 100vh;
+}
+
+
 
 .login__container {
-    min-height: 400px;
-    width: 300px;
+    min-height: 300px;
+    width: 500px;
     background-color: #ffffffff;
     box-sizing: border-box;
     padding: 32px;
@@ -33,20 +46,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 35%;
 }
+
 
 .login__title {
     margin-bottom: 32px;
     color: #303030;
+    font-size: xx-large;
 }
 
-.login__form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 .login__input {
     height: 48px;
@@ -65,7 +74,7 @@ body {
     transition: 3s, ease-in-out;
 }
 
-login__input-border::after {
+.login__input-border::after {
     content: '';
     display: block;
     height: 1px;
@@ -104,43 +113,71 @@ login__input-border::after {
     color: #929292;
     text-decoration: none;
 
+
 }
 
 
-.login__reset {
-    font-size: 15px;
-    color: #919292
-}
+
 
 /*Tela Crachá*/
 
 
-.form__geral {
+
+
+.badge__geral {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    width: 100%;
+    max-height: 100%;
+    background-color: var(--button-linear);
 }
 
-.form__container {
-    max-width: 500px;
-   
-    margin: 20px auto;
-    border: 2px solid #aaa3;
-    padding: 20px;
-    text-align: center;
-    background-color: #303030;
+
+.badge__form {
+    align-items: center;
+    height: 100%
 }
 
-.form__title {
-    font-size: 12px;
-    margin-bottom: 10px;
+.badge__container {
+    display: flex;
+    align-items: center;
+    background-color: #ffcc00;
+    box-sizing: border-box;
+    padding: 25px;
+    height: 100%;
+    width: 450px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
 }
 
-.form__img {
-    width: 80px;
-    margin-bottom: 2px;
+.badge__image {
+    width: 140px;
+    height: 140px;
+    margin-top: 30%;
+    margin-left: 10%;
+    background-size: cover;
+    border: 1px solid black;
+    background-color: #262626;
+    border-radius: 15px;
+
 }
-.form__informations{
-    justify-content: flex-end;
-    border: solid white;
-    text-align: end;
+
+.full__name-js {
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.badge__info {
+    margin-left: 16px;
+    margin-top: 2%;
+    padding: 0.5px 4px;
+    border: solid black;
+    color: white;
+    background-color: #262626;
+    border-radius: 15px;
+    font-size: small;
 }

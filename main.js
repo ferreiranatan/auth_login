@@ -1,56 +1,66 @@
-const URL = 'https://dummyjson.com/users';
-const botao = document.getElementById('botao');
+//Capturando as referencias do html através do DOM
+const form = document.getElementById('formLogin')
+const formCracha = document.getElementById('formCracha')
+const crachaDados = document.getElementById('crachaDados')
 
-botao.addEventListener('click', (event) => {
-  event.preventDefault();
-  const usuarioValor = document.getElementById('loginInput').value;
-  const senhaValor = document.getElementById('passwordInput').value;
-  autenticacao(usuarioValor, senhaValor);
-});
+form.addEventListener('submit', async (evento) => {
+  evento.preventDefault()
 
-const autenticacao = (usuarioValor, senhaValor) => {
-  fetch('https://dummyjson.com/auth/login', {
+  const userValue = document.getElementById('loginInput').value
+  const passwordValue = document.getElementById('passwordInput').value
+
+  const autenticated = await autenticacao(userValue, passwordValue)
+
+  if (autenticated) {
+    form.style.display = 'none'
+    formCracha.style.display = 'block'
+
+    const dataUser = await getUserData(autenticated)
+    showDataUsers(dataUser)
+  }
+})
+
+async function autenticacao(username, password) {
+  const response = await fetch('https://dummyjson.com/auth/login', {
     method: 'POST',
     headers: { 'Content-type': 'application/json' },
     body: JSON.stringify({
-      username: usuarioValor,
-      password: senhaValor
+      username,
+      password
     })
   })
-  .then(res => res.json())
-  .then(data => {
-    const autenticado = data.username === usuarioValor && data.password === senhaValor;
 
-    if (autenticado) {
-      getInformationforApi();
-    } else {
-      console.log('Credenciais inválidas');
-    }
-  });
-};
+  if (response.ok) {
+    const data = await response.json()
+    return data.id
+  }
+  return null
+}
 
-const getInformationforApi = () => {
-  fetch(URL)
-  .then(res => res.json())
-  .then(data => {
-    const usuarioValor = document.getElementById('loginInput').value;
-    const senhaValor = document.getElementById('passwordInput').value;
-    
-    const login = data.find(item => item.username === usuarioValor && item.password === senhaValor);
+async function getUserData(id) {
+  const response = await fetch(`https://dummyjson.com/users/${id}`)
+  if (response.ok) {
+    return await response.json()
+  }
+  return null
+}
 
-    if (login) {
-      document.getElementById('formLogin').style.display = 'none';
-      document.getElementById('formData').style.display = 'block';
+async function showDataUsers(dataUser) {
+  if (dataUser) {
+    const crachaImage = document.getElementById('crachaImage');
+    crachaImage.style.backgroundImage = `url("${dataUser.image}")`;
 
-      document.getElementById('id').innerText = login.id;
-      document.getElementById('userName').innerText = login.username;
-      document.getElementById('email').innerText = login.email;
-      document.getElementById('fName').innerText = login.firstname;
-      document.getElementById('lName').innerText = login.lastname;
-      document.getElementById('gender').innerText = login.gender;
-      document.getElementById('userImage').src = login.image;
-    } else {
-      console.log('Usuário não encontrado');
-    }
-  });
-};
+    const fullName = document.getElementById('fullName')
+    fullName.innerHTML = `<p class="full__name-js"><span>${dataUser.firstName} </span>${dataUser.lastName}</p>`
+
+    const crachaDados = document.getElementById('crachaDados');
+    crachaDados.innerHTML = `
+      <p><span>ID:</span>${dataUser.id}<p>
+      <p>Nome: ${dataUser.firstName}</p>
+      <p>Sobrenome: ${dataUser.lastName}</p>
+      <p>Usuario: ${dataUser.username}</p>
+      <p>Email: ${dataUser.email}</p>
+      <p>Gênero: ${dataUser.gender}</p>
+    `;
+  }
+}

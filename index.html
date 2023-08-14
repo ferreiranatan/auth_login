@@ -9,33 +9,35 @@
 </head>
 
 <body>
-    <form id="formLogin" class="login__form"   style="display: block;">
-        <div class="login__container">
-            <h1 class="login__title">Login </h1>
-            <input type="text" id="loginInput" class="login__input" placeholder="user">
-            <span class="login__input-border"></span>
-            <input type="password" id="passwordInput" class="login__input" placeholder="senha" autocomplete="current-password">
-            <span class="login__input-border"></span>
-            <button class="login__submit" id="botao">Login</button>
-            <a href="#" class="login__reset">Esqueci a senha</a>
-        </div>
-    </form>
-
-
-
-    <form action="#" class="form__geral" id="cracha" style="display: none;">
-        <div>
-            <h2>IDENTIFICATION CARD</h2>
-        </div>
-        <div id="crachaDados">
-            
-              
+    <div class="login__geral">
+        <form id="formLogin" class="login__form" style="display: block;">
+            <div class="login__container">
+                <h1 class="login__title">Login </h1>
+                <input type="text" id="loginInput" class="login__input" placeholder="user">
+                <span class="login__input-border"></span>
+                <input type="password" id="passwordInput" class="login__input" placeholder="senha"
+                    autocomplete="current-password">
+                <span class="login__input-border"></span>
+                <button class="login__submit" id="botao">Entrar</button>
+                <a href="#" class="login__reset">Esqueci a senha</a>
             </div>
+    </div>
     </form>
 
 
+    <div class="badge__geral">
+        <form action="#" id="formCracha" class="badge__form" style="display: none;">
+            <div class="badge__container">
+                    
+                    <div class="namePhoto">
+                        <div class="badge__image" id="crachaImage"></div>
+                        <div class="full__name" id="fullName"></div>
+                    </div>
+                
+                <div class="badge__info" id="crachaDados"></div>
+            </div>
+        </div>
+    </form>
 
-    <script src="main2.js"></script>
+    <script src="main.js"></script>
 </body>
-
-</html>
