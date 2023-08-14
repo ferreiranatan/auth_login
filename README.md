@@ -45,10 +45,10 @@ Here are some example users that you can use to authenticate with the Cracha app
 
 * User: hbingley1
 * Password: CQutx25i8r
-
+------------------------------------------
 * User: jtreleven5
 * Password: zY1nE46Zm
-
+------------------------------------------
 * User: dpettegre6
 * Password: YVmhktgYVS
 
