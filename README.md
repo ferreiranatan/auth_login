@@ -26,8 +26,8 @@ Aqui estão alguns exemplos de usuários que você pode usar para autenticar com
 Se você está tendo problemas para autenticar com o aplicativo Cracha, certifique-se de estar usando o nome de usuário e a senha corretos. Você também pode tentar atualizar a página.
 
 ## Fontes
-https://stackoverflow.com/
-https://www.alura.com.br/
+* https://stackoverflow.com/
+* https://www.alura.com.br/
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## How to use the Cracha application
@@ -59,5 +59,7 @@ If you are having trouble authenticating with the Cracha application, please mak
 If you are still having trouble, please contact the Cracha support team.
 
 ## Fonts
-https://stackoverflow.com/
+* https://stackoverflow.com/
+* https://www.alura.com.br/
+
 https://www.alura.com.br/
